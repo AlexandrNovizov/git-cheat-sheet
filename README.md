@@ -1,6 +1,6 @@
 # Шпаргалка по Git
 
-
+## Основные комманды
 * `git init` - Инициализировать репозиторий.
 * `git add <files>` - Подготовить файл(-ы) к коммиту.
 * `git commit -m <message>` - Создать коммит с сообщением `<message>`.
@@ -12,3 +12,14 @@
     1. `<remote-repository-name>` - имя удаленного репозитория
     2. `<remote-repository-branch>` - название ветки в удаленном репозитории
 * `git clone <remote-repository-url>` - Скачать удаленный репозиторий в рабочий каталог.
+
+## Статусы файлов
+
+```mermaid
+graph LR
+    untracked -- "git add" --> tracked/staged 
+    tracked/staged -- "modification" --> modified
+    tracked/staged -- "git commit" --> tracked/commited
+    tracked/commited -- "modification" --> modified
+    modified -- "git add" --> tracked/staged
+```
