@@ -28,3 +28,8 @@ graph LR
     tracked/commited -- "modification" --> modified
     modified -- "git add" --> tracked/staged
 ```
+
+## Внутренняя работа Git
+
+* `HEAD` - файл, содержащий ссылку на файл `refs/heads/<название ветки>`. Находится в папке `.git`
+* `refs/heads/<название ветки>` - файл, содержащий хеш последнего коммита. Находится в папке `.git`
